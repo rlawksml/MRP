@@ -1,21 +1,44 @@
 import React from 'react';
 import styled from 'styled-components';
+import Navigation from '../coponents/Navigation.jsx'
+import {Grid , container} from '@material-ui/core'
 
 export default () => {
   return (
-    <div>
-      <Title>안녕하세요</Title>
-      <li>1</li>
-      <li>2</li>
-      <li>3</li>
-      <li>4</li>
-      <li>5</li>
-      <div>웹팩입니다</div>
-    </div>
+    <>
+    <LeftNav>
+    </LeftNav>
+      <Navigation/>
+      <br/>
+      <MainContainer>
+        <Grid spacing={1} container  direction="row" justify="center" alignItems="center">
+            <Logo></Logo>
+        </Grid>
+      </MainContainer>
+    </>
   );
 };
 
-const Title = styled.div`
+const MainContainer = styled.div`
   color: red;
   border: 1px solid blue;
+  height : 50em;
+  width: 100%;
+  overflow: hidden;
+  display : flex;
+  justify-content: center;
+  align-items: center;
 `;
+
+const Logo = styled.div`
+  border: 1px solid Red;
+  height : 100px;
+  width: 100px;
+`;
+
+const LeftNav = styled.div`
+float : left;
+top : 0;
+left : 0;
+border: 1px solid black;
+`
