@@ -1,5 +1,13 @@
 import React from 'react';
-import ReactDom from 'react-dom';
 import Home from './pages/Home.jsx';
+import Navigation from './coponents/Navigation.jsx'
+import StyledGlobal from './styled/global.js'
 
-ReactDom.render(<Home />, document.querySelector('#root'));
+export default () => (
+    <>
+      <StyledGlobal />
+      <Navigation />
+      <Home />
+    </>
+  );
+  

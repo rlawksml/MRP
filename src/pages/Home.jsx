@@ -1,15 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import Navigation from '../coponents/Navigation.jsx'
+// import Navigation from '../coponents/Navigation.jsx'
 import {Grid , container} from '@material-ui/core'
 
 export default () => {
   return (
     <>
-    <LeftNav>
-    </LeftNav>
-      <Navigation/>
-      <br/>
       <MainContainer>
         <Grid spacing={1} container  direction="row" justify="center" alignItems="center">
             <Logo></Logo>
@@ -18,6 +14,7 @@ export default () => {
     </>
   );
 };
+
 
 const MainContainer = styled.div`
   color: red;
@@ -33,12 +30,5 @@ const MainContainer = styled.div`
 const Logo = styled.div`
   border: 1px solid Red;
   height : 100px;
-  width: 100px;
+  width:250px;
 `;
-
-const LeftNav = styled.div`
-float : left;
-top : 0;
-left : 0;
-border: 1px solid black;
-`
