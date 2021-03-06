@@ -7,7 +7,7 @@ export default () => {
   return (
     <>
       <MainContainer>
-        <Grid spacing={1} container  direction="row" justify="center" alignItems="center">
+        <Grid spacing={1} container direction="row" justify="center" alignItems="center">
             <Logo></Logo>
         </Grid>
       </MainContainer>
