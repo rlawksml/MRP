@@ -12,8 +12,8 @@ import Contact from './pages/Contact.jsx';
 export default () => (
   <>
     <StyledGlobal />
-    {/* <Navigation /> */}
     <Router>
+      <Navigation />
       <Switch>
         <Route exact path="/">
           <Home></Home>

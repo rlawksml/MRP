@@ -6,7 +6,7 @@ import { Grid, container } from '@material-ui/core';
 export default () => {
   return (
     <>
-      <Navigation></Navigation>
+      {/* <Navigation/> */}
       <MainContainer>
         <Grid spacing={1} container direction="row" justify="center" alignItems="center">
           <Logo></Logo>

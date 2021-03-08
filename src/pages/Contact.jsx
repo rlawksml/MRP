@@ -7,7 +7,7 @@ export default () => {
   return (
     <>
       <h1>Contact(개발자) 페이지</h1>
-      <Navigation></Navigation>
+      {/* <Navigation /> */}
       <MainContainer>
         <SectionContain
           item
