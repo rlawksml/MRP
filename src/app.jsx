@@ -2,6 +2,7 @@ import React from 'react';
 import Home from './pages/Home.jsx';
 import Navigation from './coponents/Navigation.jsx';
 import StyledGlobal from './styled/global.js';
+import styled from 'styled-components';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Login from './pages/Login.jsx';
@@ -12,6 +13,7 @@ import Contact from './pages/Contact.jsx';
 export default () => (
   <>
     <StyledGlobal />
+    <Backgorund>
     <Router>
       <Navigation />
       <Switch>
@@ -37,5 +39,14 @@ export default () => (
         <Contact /> */}
       </Switch>
     </Router>
+    </Backgorund>
   </>
 );
+
+
+const Backgorund = styled.body`
+  background-color: white;
+  height : 100vh;
+  width: 100%;
+  overflow-x:hidden;
+`;

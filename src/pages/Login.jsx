@@ -7,7 +7,7 @@ export default () => {
   return (
     <>
       <br />
-      <h1>로그인페이지</h1>
+      {/* <h1>로그인페이지</h1> */}
       {/* <Navigation /> */}
       <MainContainer>
         <LoginGrid spacing={1} container direction="column" justify="center" alignItems="center">

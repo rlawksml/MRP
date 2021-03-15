@@ -6,7 +6,7 @@ import Navigation from '../coponents/Navigation.jsx';
 export default () => {
   return (
     <>
-      <h1>Contact(개발자) 페이지</h1>
+      {/* <h1>Contact(개발자) 페이지</h1> */}
       {/* <Navigation /> */}
       <MainContainer>
         <SectionContain

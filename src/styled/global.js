@@ -14,5 +14,7 @@ export default createGlobalStyle`
         overflow-x: hidden;
         overflow-y: auto;
         scroll-behavior: smooth;
+        padding: 0;
+        margin: 0;
     }
 `;

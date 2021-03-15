@@ -6,7 +6,7 @@ import Navigation from '../coponents/Navigation.jsx';
 export default () => {
   return (
     <>
-      <h1>픽(Pick) 페이지</h1>
+      {/* <h1>픽(Pick) 페이지</h1> */}
       {/* <Navigation/> */}
       <MainContainer>
         <Grid container spacing={2} direction="row" justify="center" alignItems="center">
