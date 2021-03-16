@@ -2,25 +2,23 @@ import React from 'react';
 import styled from 'styled-components';
 import { Grid } from '@material-ui/core';
 import { Link } from 'react-router-dom';
-import StyledGlobal from '../styled/global.js';
+import StyledGlobal from '../styled/global';
 
 export default () => {
   return (
     <>
     <StyledGlobal />
+    <NavContainer>
     <NavBar>
-      <Grid container justify="flex-start" alignitems="center" spacing={2}>
+      <Grid container justify="flex-start" alignitems="center" spacing={1}>
         <HamMenu item xs={2} sm={2} md={2} lg={2} xl={2}>
           <Menus>
-            <Link to="/">Home</Link>
+          <Link to="/">Home</Link>
           </Menus>
         </HamMenu>
         <Grid item xs={2} sm={2} md={2} lg={2} xl={2}>
-          <Menus></Menus>
-        </Grid>
-        <Grid item xs={2} sm={2} md={2} lg={2} xl={2}>
           <Menus>
-            <Link to="/Cart">Favorite</Link>
+          <Link to="/Cart">Favorite</Link>
           </Menus>
         </Grid>
         <Grid item xs={2} sm={2} md={2} lg={2} xl={2}>
@@ -28,13 +26,19 @@ export default () => {
             <Link to="/Pick">Pick</Link>
           </Menus>
         </Grid>
+        <Grid item xs={2} sm={2} md={2} lg={2} xl={2}>
+          <Menus>
+            <Link to='/Contact'>Contact</Link>
+          </Menus>
+        </Grid>
         <Grid item xs={4} sm={4} md={4} lg={4} xl={4}>
           <Login>
-            <Link to="/Login">Login/Logout</Link>
+            <Link to="/Login">Login / Sign Up</Link>
           </Login>
         </Grid>
       </Grid>
     </NavBar>
+    </NavContainer>
     </>
   );
 };
@@ -45,30 +49,55 @@ const HamMenu = styled(Grid)`
 `;
 
 const Menus = styled.a`
-  // border: 1px solid blue;
   font-size: 1.3rem;
   color: white;
-
+  transition : 0.3s;
+  &:hover {
+    background: #white;
+    font-weight: bold;
+  }
+  &:active {
+    width: 100%;
+    height: 1px;
+    border-bottom : 1px solid white;
+  }
 `;
 
 const Login = styled.a`
   float: right;
-  top: 0;
-  right: 0;
-  // border: 1px solid blue;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: white;
+  transition : 0.3s;
+  &:hover {
+    background: #white;
+    font-weight: bold;
+  }
+  &:active {
+    width: 100%;
+    height: 1px;
+    border-bottom : 1px solid white;
+  }
 `;
 
 const NavBar = styled.div`
   width: 100%;
-  height: 60px;
-  border-bottom: 1px solid darkgray;
-  padding: 20px;
+  height: 100%;
+  max-width: 1000px;
+  margin:0 auto;
+  // border-bottom: 1px solid darkgray;
+  // padding: 0 5rem;
   align-items: center;
   justify-content: center;
   display: flex;
-  overflow-y: hidden;
+  overflow:hidden;
   background-color: #7292cc;
   opacity: 0.9;
 `;
+
+const NavContainer = styled.div`
+background-color: #7292cc;
+width: 100%;
+height: 70px;
+font-family: Roboto;
+font-weight: 100;
+`

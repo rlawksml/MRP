@@ -37,4 +37,7 @@ module.exports = {
     inline: true,
     historyApiFallback: true,
   },
+  resolve: {
+    extensions:[ '.js','.jsx']
+  },
 };

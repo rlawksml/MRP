@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Grid, container } from '@material-ui/core';
-import Navigation from '../coponents/Navigation.jsx';
+import Navigation from '../coponents/Navigation';
 
 export default () => {
   return (

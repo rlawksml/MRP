@@ -1,14 +1,14 @@
 import React from 'react';
-import Home from './pages/Home.jsx';
-import Navigation from './coponents/Navigation.jsx';
-import StyledGlobal from './styled/global.js';
+import Home from './pages/Home';
+import Navigation from './coponents/Navigation';
+import StyledGlobal from './styled/global';
 import styled from 'styled-components';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import Login from './pages/Login.jsx';
-import Cart from './pages/Cart.jsx';
-import Pick from './pages/Pick.jsx';
-import Contact from './pages/Contact.jsx';
+import Login from './pages/Login';
+import Cart from './pages/Cart';
+import Pick from './pages/Pick';
+import Contact from './pages/Contact';
 
 export default () => (
   <>
