@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Grid } from '@material-ui/core';
-import { Link } from 'react-router-dom';
+import { BrowserRouter as Router, Link } from 'react-router-dom';
 import StyledGlobal from '../styled/global';
 
 export default () => {
@@ -72,11 +72,6 @@ const Login = styled.a`
     background: #white;
     font-weight: bold;
   }
-  &:active {
-    width: 100%;
-    height: 1px;
-    border-bottom : 1px solid white;
-  }
 `;
 
 const NavBar = styled.div`
@@ -85,7 +80,7 @@ const NavBar = styled.div`
   max-width: 1000px;
   margin:0 auto;
   // border-bottom: 1px solid darkgray;
-  // padding: 0 5rem;
+  padding: 0 5rem;
   align-items: center;
   justify-content: center;
   display: flex;

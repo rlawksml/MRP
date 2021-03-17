@@ -32,7 +32,10 @@ export default () => (
         <Route path="/Contact">
           <Contact></Contact>
         </Route>
-        <Route path="/">Not Found</Route>
+        <Route path="/"><NotFound><NotFountWord>
+          페이지 정보를 찾을 수 없습니다.<br></br>
+          Page Not Found
+          </NotFountWord> </NotFound></Route>
         {/* <Login />
         <Cart />
         <Pick />
@@ -50,3 +53,21 @@ const Backgorund = styled.body`
   width: 100%;
   overflow-x:hidden;
 `;
+
+const NotFound = styled.div`
+  background-color : 
+  width : 100vh;
+  height: 80vw;
+  display: flex;
+  align-items: center;
+  justify-content : center;
+`
+
+const NotFountWord = styled.p`
+color : #3956A5;
+font-family: Roboto;
+font-weight: bold;
+font-size : 3rem;
+text-align:center;
+line-height: 5rem;
+`
