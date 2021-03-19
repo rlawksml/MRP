@@ -18,12 +18,12 @@ export default () => {
           justify="center"
           alignItems="center"
         >
-          <DevDiv>
+          <DevDiv1>
             <h3>개발자</h3>
-          </DevDiv>
-          <DevDiv>
+          </DevDiv1>
+          <DevDiv2>
             <h3>개발자</h3>
-          </DevDiv>
+          </DevDiv2>
         </SectionContain>
 
         <SectionContain
@@ -61,14 +61,33 @@ const MainContainer = styled.div`
   align-items: center;
 `;
 
-const DevDiv = styled.div`
-  border: 1px solid blue;
-  height: 100px;
-  width: 100px;
-  margin-right: 20px;
+const DevDiv1 = styled.div`
+
+  box-shadow: 2px 2px 10px 2px #7292cc;
+  border-radius: 100%;
+  height: 200px;
+  width: 200px;
+  margin-right: 50px;
+  transition: 0.3s;
+  &:hover {
+    background-color: #c4c5c6;
+  }
+`;
+const DevDiv2 = styled.div`
+
+  box-shadow: 2px 2px 10px 2px #7292cc;
+  border-radius: 100%;
+  height: 200px;
+  width: 200px;
+  margin-right: 15px;
+  transition: 0.3s;
+  &:hover {
+    background-color: #c4c5c6;
+  }
 `;
 
 const SectionContain = styled(Grid)`
+
   border: 1px solid red;
   height: 40em;
   display: flex;

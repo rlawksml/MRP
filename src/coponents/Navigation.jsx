@@ -95,4 +95,5 @@ width: 100%;
 height: 70px;
 font-family: Roboto;
 font-weight: 100;
+box-shadow: 1px 1px 10px 1px #4e6caf;
 `
