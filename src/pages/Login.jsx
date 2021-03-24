@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Grid, container } from '@material-ui/core';
 import Navigation from '../coponents/Navigation';
-
+import Auth from '../coponents/Auth';
 export default () => {
   return (
     <>
