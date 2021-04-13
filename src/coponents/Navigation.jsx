@@ -48,29 +48,35 @@ const HamMenu = styled(Grid)`
   float: left;
 `;
 
-const Menus = styled.a`
+const Menus = styled.li`
+  list-style:none;
   font-size: 1.3rem;
+  font-weight: 400;
   color: white;
   transition : 0.3s;
   &:hover {
     background: #white;
     font-weight: bold;
+    color: black;
   }
-  &:active {
-    width: 100%;
-    height: 1px;
-    border-bottom : 1px solid white;
-  }
+  // &:active {
+  //   width: 100%;
+  //   height: 1px;
+  //   border-bottom : 1px solid white;
+  // }
 `;
 
-const Login = styled.a`
+const Login = styled.li`
+list-style:none;
   float: right;
+  font-weight: 400;
   font-size: 1.3rem;
   color: white;
   transition : 0.3s;
   &:hover {
     background: #white;
     font-weight: bold;
+    color: black;
   }
 `;
 
@@ -79,7 +85,6 @@ const NavBar = styled.div`
   height: 100%;
   max-width: 1000px;
   margin:0 auto;
-  // border-bottom: 1px solid darkgray;
   padding: 0 5rem;
   align-items: center;
   justify-content: center;

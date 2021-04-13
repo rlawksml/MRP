@@ -47,7 +47,7 @@ export default () => (
 );
 
 
-const Backgorund = styled.body`
+const Backgorund = styled.div`
   background-color: white;
   height : 100vh;
   width: 100%;

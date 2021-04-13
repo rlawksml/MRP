@@ -1,14 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Grid, container } from '@material-ui/core';
-import Navigation from '../coponents/Navigation';
 
 export default () => {
   return (
     <>
-      <br />
-      {/* <h1>로그인페이지</h1> */}
-      {/* <Navigation /> */}
       <MainContainer>
         <LoginGrid spacing={1} container direction="column" justify="center" alignItems="center">
           <Grid item xs={6} sm={6} md={6} lg={6} xl={6}>
@@ -30,7 +26,7 @@ export default () => {
   );
 };
 
-const Finding = styled.a`
+const Finding = styled.li`
   border: 1px solid red;
   width: 300px;
   height: 100px;
@@ -52,8 +48,6 @@ const MainContainer = styled.div`
   justify-content: center;
   align-items: center;
 `;
-
-const LoginGrid = styled(Grid)``;
 
 const LogoGrid = styled(Grid)`
   border: 1px solid Red;
