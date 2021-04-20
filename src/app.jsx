@@ -9,6 +9,7 @@ import Login from './pages/Login';
 import Cart from './pages/Cart';
 import Pick from './pages/Pick';
 import Contact from './pages/Contact';
+import Trash from './pages/Trash'
 
 export default () => (
   <>
@@ -32,6 +33,9 @@ export default () => (
         <Route path="/Contact">
           <Contact></Contact>
         </Route>
+        <Route path="/Trash">
+            <Trash></Trash>
+          </Route>
         <Route path="/"><NotFound><NotFountWord>
           페이지 정보를 찾을 수 없습니다.<br></br>
           Page Not Found
