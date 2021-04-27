@@ -1,16 +1,26 @@
 import React from 'react';
 import styled from 'styled-components';
-import LoginForms from '../coponents/LoginComponent'
+import { useHistory} from 'react-router-dom'
+import {useLocation} from "react-router"
+
 
 export default () => {
-
+  let history = useHistory();
   let inputwidth={width:"250px"}; 
+  const LogoutHandler = ()=>{
+    history.push("/Login")
+  }
+  const location = useLocation();
+  const id = location.state.ID;
   return (
     <>
       <MainContainer>
         <Formsdiv>
-          <LoginForms/>
-        </Formsdiv>
+          <form>
+            <div>Welcome! {id}</div>
+            <button type="submit" onClick={LogoutHandler}>로그아웃</button>
+          </form>
+        </Formsdiv> 
       </MainContainer>
     </>
   );
