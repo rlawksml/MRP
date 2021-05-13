@@ -1,17 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export default () => {
+export default ({ OnNext, OnAdd, count }) => {
   return (
     <>
-          <ProductDiv item xs={7} sm={7} md={7} lg={7} xl={7}>
-            Image
-            <ButtonDiv>
-              <NextButton>Next</NextButton>
-              <PickButton>Pick</PickButton>
-            </ButtonDiv>
-          </ProductDiv>
-
+      <ProductDiv item xs={7} sm={7} md={7} lg={7} xl={7}>
+        <h1> {count}</h1>
+        <ButtonDiv>
+          <NextButton onClick={OnNext}>Next</NextButton>
+          <PickButton onClick={OnAdd}>Pick</PickButton>
+        </ButtonDiv>
+      </ProductDiv>
+      {false && <Cart state={ItemList} />}
     </>
   );
 };
@@ -36,7 +36,7 @@ const ButtonDiv = styled.div`
 `;
 
 const NextButton = styled.li`
-list-style:none;
+  list-style: none;
   position: absolute;
   top: -30px;
   left: 10px;
@@ -50,17 +50,17 @@ list-style:none;
   background-color: #f23f57;
   font-family: Roboto;
   font-weight: 400;
-  font-size:1.5rem;
+  font-size: 1.5rem;
   color: white;
   transition: 0.3s;
   opacity: 0.7;
-  &:hover{
+  &:hover {
     opacity: 1;
   }
 `;
 
 const PickButton = styled.li`
-list-style:none;
+  list-style: none;
   position: absolute;
   top: -30px;
   right: 10px;
@@ -75,7 +75,7 @@ list-style:none;
   background-color: #254489;
   font-family: Roboto;
   font-weight: 400;
-  font-size:1.5rem;
+  font-size: 1.5rem;
   opacity: 0.7;
   transition: 0.3s;
   &:hover {

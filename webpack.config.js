@@ -3,6 +3,9 @@ const htmlwebpackplugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'development',
+  resolve: {
+    extensions: ['.js', '.jsx'],
+  },
   entry: { main: './src/index.jsx' },
   module: {
     rules: [
@@ -19,9 +22,9 @@ module.exports = {
         use: ['style-loader', 'css-loader'],
       },
       {
-        test : /\.(png|jpg)$/,
-        use : ["file-loader"]
-      }
+        test: /\.(png|jpg)$/,
+        use: ['file-loader'],
+      },
     ],
   },
   output: {
@@ -36,8 +39,5 @@ module.exports = {
   devServer: {
     inline: true,
     historyApiFallback: true,
-  },
-  resolve: {
-    extensions:[ '.js','.jsx']
   },
 };
