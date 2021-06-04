@@ -1,18 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
-import {useState} from 'react';
+import { useState } from 'react';
 
 export default () => {
-  const [Name, setName] = useState('')
-  const [Email, setEmail] = useState('')
-  const [Text, setText] = useState('')
+  const [Name, setName] = useState('');
+  const [Email, setEmail] = useState('');
+  const [Text, setText] = useState('');
 
   const SumbitHandler = (e) => {
     e.preventDefault();
-    setText(document.getElementById('msg').value)
-    setName(document.getElementById('name').value)
-    setEmail(document.getElementById('email').value)
-    console.log(Name, Email, Text)
+    setText(document.getElementById('msg').value);
+    setName(document.getElementById('name').value);
+    setEmail(document.getElementById('email').value);
+    console.log(Name, Email, Text);
   };
   return (
     <>
@@ -27,12 +27,10 @@ export default () => {
         </InfoContainer>
         <InfoContainer>
           <label htmlFor="message">Message : </label>
-          <Textarea name="message" id="msg" cols="30" rows="10" ></Textarea>
+          <Textarea name="message" id="msg" cols="30" rows="10"></Textarea>
         </InfoContainer>
         <InfoContainer>
-          <Submit type="submit" >
-            보내기
-          </Submit>
+          <Submit type="submit">보내기</Submit>
         </InfoContainer>
       </Form>
       <Footer>
@@ -45,8 +43,8 @@ export default () => {
 };
 
 const Textarea = styled.textarea`
-resize : none;
-`
+  resize: none;
+`;
 
 const InfoContainer = styled.div`
   // border: 1px dashed black;
@@ -61,7 +59,7 @@ const Submit = styled.button`
 `;
 
 const Form = styled.form`
-  border: 1px solid red;
+  // border: 1px solid red;
   width: 100%;
   height: 80vh;
   display: flex;

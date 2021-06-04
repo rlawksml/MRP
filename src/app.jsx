@@ -29,12 +29,12 @@ export default () => (
           <Route path="/Trash" component={Trash} />
           <Route path="/Test" component={PickItemList} />
           <Route path="/">
-            <NotFound>
+            {/* <NotFound>
               <NotFountWord>
                 페이지 정보를 찾을 수 없습니다.<br></br>
                 Page Not Found
               </NotFountWord>{' '}
-            </NotFound>
+            </NotFound> */}
           </Route>
         </Switch>
       </BrowserRouter>

@@ -4,20 +4,33 @@ import { Grid, container } from '@material-ui/core';
 import TrashImage from '../assets/Trash/1x/outline_delete_forever_black_36dp.png';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
 import Trash from './Trash';
+import { useLocation } from 'react-router';
+import CartComponent from '../coponents/CartComponent';
 
 export default () => {
-  const [DelItemList, setDelItemList] = useState([]);
+  const location = useLocation();
+  const [ItemList, setItemList] = useState([
+    <CartComponent />,
+    <CartComponent />,
+    <CartComponent />,
+    <CartComponent />,
+    <CartComponent />,
+  ]);
+
   return (
     <>
-      <Finding></Finding>
       <Container>
         <MainContainer>
-          <Grid container spacing={2} direction="row" justify="center" alignItems="center"></Grid>
+          <Grid container spacing={2} direction="row" justify="center" alignItems="center">
+            {ItemList.map((e) => (
+              <div key={e.index}>{e}</div>
+            ))}
+          </Grid>
         </MainContainer>
-        <Link to="/Trash">
+        {/* <Link to="/Trash">
           {false && <Trash DelItemList={DelItemList} />}
           <TrashContainer />
-        </Link>
+        </Link> */}
       </Container>
     </>
   );
@@ -41,11 +54,9 @@ const TrashContainer = styled.div`
 
 const Container = styled.div`
   display: flex;
-  border: 1px solid red;
-  margin: 10px;
   align-items: center;
   justify-content: center;
-  width: 100vw;
+  width: 90vw;
   height: 90vh;
 `;
 

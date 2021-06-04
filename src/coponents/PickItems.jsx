@@ -5,7 +5,7 @@ export default ({ OnNext, OnAdd, count }) => {
   return (
     <>
       <ProductDiv item xs={7} sm={7} md={7} lg={7} xl={7}>
-        <h1> {count}</h1>
+        {/* <h1> {count}</h1> */}
         <ButtonDiv>
           <NextButton onClick={OnNext}>Next</NextButton>
           <PickButton onClick={OnAdd}>Pick</PickButton>

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Grid, container } from '@material-ui/core';
 import ReactStars from 'react-rating-stars-component';
 
-export default ({ onDelete, Text }) => {
+export default () => {
   const ratingChanged = (newRating) => {
     console.log(newRating);
   };
@@ -11,7 +11,7 @@ export default ({ onDelete, Text }) => {
     <>
       <CartGrid>
         {/* 장바구니 그리드 */}
-        <Deletebutton onClick={onDelete}>X</Deletebutton>
+        <Deletebutton onClick={}>X</Deletebutton>
         {/* 삭제 버튼 */}
         <ItemBtm>
           {/* 별점 버튼 */}
