@@ -6,7 +6,7 @@ import StyledGlobal from '../styled/global';
 import CartImg from '../assets/Icons/2x/Cart_white.png';
 import CheckImg from '../assets/Icons/2x/Check_white.png';
 
-export default ({ count }) => {
+export default () => {
   return (
     <>
       <StyledGlobal />
@@ -15,18 +15,18 @@ export default ({ count }) => {
           <Grid container justify="flex-start" alignitems="center" spacing={1}>
             <HamMenu item xs={2} sm={2} md={2} lg={2} xl={2}>
               <Menus>
-                <Link to="/">{count}Home</Link>
+                <Link to="/">Home</Link>
               </Menus>
             </HamMenu>
             <Grid item xs={2} sm={2} md={2} lg={2} xl={2}>
-              <Menus>
+              <CartMenus>
                 <Link to="/Cart">Cart</Link>
-              </Menus>
+              </CartMenus>
             </Grid>
             <Grid item xs={2} sm={2} md={2} lg={2} xl={2}>
-              <Menus>
+              <PickMenus>
                 <Link to="/Pick">Pick</Link>
-              </Menus>
+              </PickMenus>
             </Grid>
             <Grid item xs={2} sm={2} md={2} lg={2} xl={2}>
               <Menus>
@@ -63,6 +63,31 @@ const HamMenu = styled(Grid)`
   width: 100%;
   float: left;
 `;
+
+const CartMenus = styled.li`
+list-style: none;
+font-size: 1.3rem;
+font-weight: 400;
+color: white;
+transition: 0.3s;
+&:hover {
+  background: #white;
+  font-weight: bold;
+  color: black;
+}  
+`
+const PickMenus = styled.li`
+list-style: none;
+font-size: 1.3rem;
+font-weight: 400;
+color: white;
+transition: 0.3s;
+&:hover {
+  background: #white;
+  font-weight: bold;
+  color: black;
+}  
+`
 
 const Menus = styled.li`
   list-style: none;

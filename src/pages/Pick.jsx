@@ -32,6 +32,7 @@ export default () => {
     setCount(count + 1);
     setCartCount(CartCount + 1);
   };
+
   const OnNext = (e) => {
     e.preventDefault();
     setCount(count + 1);
@@ -40,11 +41,7 @@ export default () => {
       setCount(1);
     }
   };
-  useEffect(() => {
-    return () => {
-      <Navigation state={count} />;
-    };
-  }, [ItemList]);
+
   return (
     <>
       <MainContainer>

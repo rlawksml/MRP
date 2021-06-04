@@ -31,7 +31,7 @@ const UnderLogo = styled.div`
   position: relative;
 `;
 
-const LogoWord = styled.a`
+const LogoWord = styled.div`
   color: #1d1d1f;
   font-size: 2rem;
   position: absolute;
@@ -40,7 +40,7 @@ const LogoWord = styled.a`
   padding-top: 1rem;
 `;
 
-const BlueLogoWord = styled.a`
+const BlueLogoWord = styled.div`
   padding-left: 10px;
   color: #0024d3;
   font-size: 2rem;

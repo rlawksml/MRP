@@ -8,7 +8,6 @@ import LogoComponent from '../coponents/Logo'
 export default () => {
   return (
     <>
-      {/* <Navigation/> */}
       <MainContainer>
           <LogoComponent/>
       </MainContainer>
