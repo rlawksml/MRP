@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import LoginForms from '../coponents/LoginComponent';
+import RegisterForm from '../coponents/RegisterForm';
 
 export default () => {
   let inputwidth = { width: '250px' };
@@ -8,7 +8,7 @@ export default () => {
     <>
       <MainContainer>
         <Formsdiv>
-          <LoginForms />
+          <RegisterForm />
         </Formsdiv>
       </MainContainer>
     </>

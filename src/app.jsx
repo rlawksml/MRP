@@ -12,6 +12,7 @@ import Contact from './pages/Contact';
 import Trash from './pages/Trash';
 import Account from './pages/Account';
 import PickItemList from './coponents/PickItemList';
+import Register from './pages/Register';
 
 export default () => (
   <>
@@ -28,6 +29,7 @@ export default () => (
           <Route path="/Contact" component={Contact} />
           <Route path="/Trash" component={Trash} />
           <Route path="/Test" component={PickItemList} />
+          <Route path="/Register" component={Register} />
           <Route path="/">
             {/* <NotFound>
               <NotFountWord>
@@ -39,6 +41,11 @@ export default () => (
         </Switch>
       </BrowserRouter>
     </Backgorund>
+    <Footer>
+      <a href="https://github.com/rlawksml/MRP.git">
+        <p>Github : https://github.com/rlawksml/MRP.git</p>
+      </a>
+    </Footer>
   </>
 );
 
@@ -65,4 +72,21 @@ const NotFountWord = styled.p`
   font-size: 3rem;
   text-align: center;
   line-height: 5rem;
+`;
+
+const Footer = styled.footer`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  font-size: 1rem;
+  font-weight: 400;
+  background-color: #7292cc;
+  color: white;
+  &:hover {
+    background-color: #4e6caf;
+  }
 `;

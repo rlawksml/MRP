@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export default ({ OnNext, OnAdd, count }) => {
+export default ({ OnNext, OnAdd }) => {
   return (
     <>
       <ProductDiv item xs={7} sm={7} md={7} lg={7} xl={7}>

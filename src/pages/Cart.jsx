@@ -6,22 +6,31 @@ import Trash from './Trash';
 import ReactStars from 'react-rating-stars-component';
 
 export default () => {
+  const [count, setCount] = useState(1);
+
+  const onCountCheck = (e) => {
+    // e.preventDefault();
+    setCount(count + 1);
+  };
 
   const CartCard = () => {
     const ratingChanged = (newRating) => {
       console.log(newRating);
     };
-  
-  return (
+    return (
       <>
         <CartGrid>
           {/* 장바구니 그리드 */}
-          <Deletebutton onClick={(e) => (
-            onDelete(ItemList.id)
-            )}>X</Deletebutton>
+          <Deletebutton
+            onClick={() => {
+              onCountCheck();
+              onDelete(count);
+            }}
+          >
+            X
+          </Deletebutton>
           {/* 삭제 버튼 */}
           <ItemBtm>
-
             {/* 별점 버튼 */}
             <ReactStars
               precision={0.5}
@@ -35,36 +44,29 @@ export default () => {
           </ItemBtm>
         </CartGrid>
       </>
-  )
-  };
-
-  const onDelete = (id) => {
-    console.log(id)
-    const newList = ItemList.filter((Item) => ItemList.id !== id);
-    setItemList(newList);
+    );
   };
 
   const [ItemList, setItemList] = useState([
-    {Item : <CartCard />,
-    id : 1},
-    // {Item : <CartCard />,
-    // id : 2},
-    // {Item : <CartCard />,
-    // id : 3},
-    // {Item : <CartCard />,
-    // id : 4},
-    // {Item : <CartCard />,
-    // id : 5},
-]);
-  
+    { Item: <CartCard />, id: 1 },
+    { Item: <CartCard />, id: 2 },
+    { Item: <CartCard />, id: 3 },
+    { Item: <CartCard />, id: 4 },
+    { Item: <CartCard />, id: 5 },
+  ]);
+
+  const onDelete = (id) => {
+    const newList = ItemList.filter((ItemList) => ItemList.id !== id);
+    setItemList(newList);
+  };
+
   return (
     <>
       <Container>
         <MainContainer>
           <Grid container spacing={2} direction="row" justify="center" alignItems="center">
             {ItemList.map((Item) => (
-              <div key={Item.id}>{Item.Item}
-              </div>
+              <div key={Item.id}>{Item.Item}</div>
             ))}
           </Grid>
         </MainContainer>
@@ -116,7 +118,6 @@ const MainContainer = styled.div`
   justify-content: center;
   align-items: center;
 `;
-
 
 const CartGrid = styled(Grid)`
   position: relative;
